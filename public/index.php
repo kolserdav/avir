@@ -1,2 +1,2 @@
 <?php
-echo "It works!";
+echo shell_exec("../a.out");
