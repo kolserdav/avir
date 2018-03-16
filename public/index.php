@@ -10,3 +10,4 @@ echo shell_exec("../a.out");
 $re->ass();
 $time2 = microtime();
 echo $time2 - $time1;
+echo '<br>tsest2w';
