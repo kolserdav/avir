@@ -1,6 +1,6 @@
 <?php
 
-namespace Avir\Database;
+namespace Avir\DataBase;
 
 
 class DbConfig

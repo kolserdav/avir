@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\DatabaseTest;
+namespace Tests\DataBaseTest;
 
-use Avir\Database\DbConfig;
-use Avir\Database\DbConnect;
+use Avir\DataBase\DbConfig;
+use Avir\DataBase\DbConnect;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 
