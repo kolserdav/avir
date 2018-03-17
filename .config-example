@@ -1,0 +1,6 @@
+#Database configuration MySql
+host : host
+port : 3306
+user : user
+password : password
+charset : utf-8

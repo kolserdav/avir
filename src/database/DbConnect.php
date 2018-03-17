@@ -1,6 +1,6 @@
 <?php
 
-namespace Avir\Kernel;
+namespace Avir\Database;
 
 
 class DbConnect

@@ -9,9 +9,14 @@
             "email": "serega12101983@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "symfony/yaml": "^3.4"
+    },
     "autoload":{
         "psr-4": {"Avir\\":"src/"}
+    },
+    "autoload-dev":{
+        "psr-4":{"Tests\\":"tests/"}
     },
     "require-dev": {
         "phpunit/phpunit": "6"
