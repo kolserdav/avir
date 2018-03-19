@@ -1,4 +1,3 @@
 .idea/
 /vendor
-/config/database-conf.php
 .config
