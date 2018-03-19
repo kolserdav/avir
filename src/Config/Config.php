@@ -11,7 +11,7 @@ class Config
      */
     protected static $config;
     /**
-     * #Get a configuration
+     * #Get a configuration from /.config
      * @return array
      */
     public static function get()
