@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d7f1aa98d0b7d051e850e4f55035117",
+    "content-hash": "7167eafb7132df0d99527899fbaa75a8",
     "packages": [
         {
             "name": "kolserdav/dbconnect",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kolserdav/dbconnect.git",
@@ -1563,7 +1563,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "kolserdav/dbconnect": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
