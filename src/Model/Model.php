@@ -12,24 +12,41 @@ use Avir\Database\Modules\DB;
 
 abstract class Model
 {
+    public $db;
+
+    public function getDB()
+    {
+        if ($this->db == null) {
+            return $this->db = new DB();
+        }
+        else {
+            return $this->db;
+        }
+    }
     public function send(string $query_name)
     {
-        $db = new DB();
-        return $db->dbCall($query_name);
+        $this->db = $this->getDB();
+        return $this->db->dbCall($query_name);
     }
     public function sendVal(string $query_name, array $values)
     {
-        $db = new DB();
-        return $db->dbCall($query_name, $values);
+        $this->db = $this->getDB();
+        return $this->db->dbCall($query_name, $values);
     }
     public function sendOpt(string $query_name, array $values, string $option)
     {
-        $db = new DB();
-        return $db->dbCall($query_name, $values, $option);
+        $this->db = $this->getDB();
+        return $this->db->dbCall($query_name, $values, $option);
     }
     public function sendFetch(string $query_name, array $values, string $option, string $fetch_rule)
     {
-        $db = new DB();
-        return $db->dbCall($query_name, $values, $option, $fetch_rule);
+        $this->db = $this->getDB();
+        return $this->db->dbCall($query_name, $values, $option, $fetch_rule);
+    }
+    public function checkTable($table_name)
+    {
+        $this->db = $this->getDB();
+        $stmt = $this->db->getStmt("SHOW TABLES LIKE '".$table_name."'");
+        return $this->db->stmtCall($stmt,'fetch', \PDO::FETCH_BOTH);
     }
 }
