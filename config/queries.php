@@ -1,5 +1,5 @@
 <?php
-//s
+//sss
 const test_query =
 "SELECT `id` FROM `users` WHERE `name` = ?";
 const create_table_users =
