@@ -18,7 +18,7 @@
     "require": {
         "php" : "^7.0",
         "symfony/yaml": "^4.0",
-        "kolserdav/dbconnect": "^2.0.4",
+        "kolserdav/dbconnect": "^2.0.5",
         "kolserdav/router": "^0.0.8",
         "twig/twig": "~2.0"
     },
