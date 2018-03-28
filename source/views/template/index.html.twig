@@ -8,9 +8,9 @@
 </head>
 <body>
 <div id="content">{% block content %}{% set greeting = 'Hello ' %}
-    {% set name = 'Fabisen' %}
+    {% set name = title2 %}
 
-    {{ greeting ~ name|upper }}{% endblock %}</div>
+    {{ greeting ~ title2|upper }}{% endblock %}</div>
 <div id="footer">
     {% block footer %}
     &copy; Copyright 2011 by <a href="http://domain.invalid/">you</a>.

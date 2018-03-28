@@ -8,14 +8,16 @@
 
 namespace Avir\Controller;
 
-use Avir\Database\Modules\DB;
+use Avir\Model\ModelOne;
+
 
 class TestController extends Controller
 {
     public function test()
     {
-
-        echo $this->template->render(array('title' => $this, 'title2' => 'here'));
+        $model = new ModelOne();
+        $m = $model->send('create_table_users');
+        echo $this->template->render(array('title' => $this, 'title2' => $m));
         return true;
     }
     public function tests()

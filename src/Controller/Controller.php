@@ -36,7 +36,7 @@ class Controller
 
     public function __construct()
     {
-        $this->loader = new Twig_Loader_Filesystem(__DIR__.'/../../views/');
+        $this->loader = new Twig_Loader_Filesystem(__DIR__.'/../../source/views/');
         $this->twig = new Twig_Environment($this->loader, array(
             'cache' => false,
             'debug' => true
