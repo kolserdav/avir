@@ -12,19 +12,24 @@ use Avir\Database\Modules\DB;
 
 abstract class Model
 {
-    protected function send(string $query_name)
+    public function send(string $query_name)
     {
         $db = new DB();
         return $db->dbCall($query_name);
     }
-    protected function sendVal(string $query_name, array $values)
+    public function sendVal(string $query_name, array $values)
     {
         $db = new DB();
         return $db->dbCall($query_name, $values);
     }
-    protected function sendOpt(string $query_name, array $values, string $option)
+    public function sendOpt(string $query_name, array $values, string $option)
     {
         $db = new DB();
         return $db->dbCall($query_name, $values, $option);
+    }
+    public function sendFetch(string $query_name, array $values, string $option, string $fetch_rule)
+    {
+        $db = new DB();
+        return $db->dbCall($query_name, $values, $option, $fetch_rule);
     }
 }
