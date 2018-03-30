@@ -3,3 +3,4 @@
 config/database.yaml
 /var
 composer.lock
+node_modules

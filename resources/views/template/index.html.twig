@@ -2,8 +2,11 @@
 <html>
 <head>
     {% block head %}
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>{% block title %}{{ title.id }}{% endblock %}</title>
+
+            <link rel="stylesheet" href="assets/css/style.css" />
+
+
+        <title>{% block title %}{{ title.id }}{% endblock %}</title>
     {% endblock %}
 </head>
 <body>
@@ -17,4 +20,5 @@
     {% endblock %}
 </div>
 </body>
+<script src="{{ asset('assets/js/script.js') }}"></script>
 </html>

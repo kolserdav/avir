@@ -16,8 +16,7 @@ class TestController extends Controller
     public function test()
     {
         $model = new ModelOne();
-        var_dump($model->checkTable('users'));exit();
-        echo $this->template->render(array('title' => $this, 'title2' => $m));
+        echo $this->template->render(array('title' => $this, 'title2' => 1));
         return true;
     }
     public function tests()
