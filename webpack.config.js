@@ -1,11 +1,21 @@
 const path = require('path');
 
 module.exports = {
-    entry: './resources/js/index.js',
+    mode: 'production',
+    entry: ["./resources/assets/js/index.js"], // string | object | array
+    // Here the application starts executing
+    // and webpack starts bundling
+
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './public/assets/js')
+        // options related to how webpack emits results
+
+        path: path.resolve(__dirname, "public/assets/js"), // string
+        // the target directory for all output files
+        // must be an absolute path (use the Node.js path module)
+
+        filename: "bundle.js", // string
+        // the filename template for entry chunks
+        libraryTarget: 'var',
+        library: 'ui'
     }
 };
-
-

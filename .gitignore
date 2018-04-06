@@ -2,5 +2,7 @@
 /vendor
 config/database.yaml
 /var
+/public/cache
 composer.lock
-node_modules
+node_modules/
+package-lock.json

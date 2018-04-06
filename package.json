@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Micro framework",
   "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch resources/assets/scss --output public/assets/css"
@@ -24,11 +21,13 @@
   },
   "homepage": "https://github.com/kolserdav/avir#readme",
   "dependencies": {
-    "lodash": "^4.17.5",
-    "node-sass": "^4.8.3"
+    "ajaxsim": "0.0.2",
+    "node-sass": "^4.8.3",
+    "russian_timer": "git+https://github.com/kolserdav/timer.git"
   },
   "devDependencies": {
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13"
+    "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
   }
 }

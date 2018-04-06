@@ -1,11 +1,12 @@
-import _ from 'lodash';
-function component() {
-    let element = document.createElement('div');
+import ajaxS from 'ajaxsim';
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    return element;
+function se(url){
+    if (navigator.onLine === true) {
+        ajaxS(url);
+    }
+    else {
+        console.log('aee');
+    }
 }
+window.se = se;
 
-document.body.appendChild(component());
