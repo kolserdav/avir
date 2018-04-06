@@ -13,3 +13,9 @@ tests :
 test :
       path : /test/{id}
       controller : TestController::test
+ajax :
+      path : /ajax
+      controller : TestController::ajax
+aj :
+      path : /aj
+      controller : TestController::aj

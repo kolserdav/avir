@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en" manifest="manifest.appcache">
+<head>
+    <link rel="import" href="http://frame.work/cache/sd.html">
+    <script type="module" src=http://frame.work/assets/js/bundle.js></script>
+    <script>window.onconnection = function(){window.se('http://frame.work/ajax', 'hash=dfsdfsd')};</script>
+</head>
+
+<body>
+
+
+
+
+
+{%  field1 %}
+<script>
+
+    let doc = document.querySelector('link[rel="import"]').import;
+    let text = doc.querySelector('.doc');
+    document.body.appendChild(text.cloneNode(true));
+</script>
+<div id="time"></div>
+</body>
+</html>

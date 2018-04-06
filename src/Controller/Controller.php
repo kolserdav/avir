@@ -12,6 +12,7 @@ use Twig_Loader_Filesystem;
 use Twig_Environment;
 use Twig_TemplateWrapper;
 
+
 class Controller
 {
     /**
@@ -36,11 +37,12 @@ class Controller
 
     public function __construct()
     {
-        $this->loader = new Twig_Loader_Filesystem(__DIR__.'/../../source/views/');
+        /*$this->loader = new Twig_Loader_Filesystem(__DIR__.'/../../resources/template/');
         $this->twig = new Twig_Environment($this->loader, array(
-            'cache' => false,
+            'cache' => '../var/cache',
             'debug' => true
         ));
-        $this->template = $this->twig->load('template/index.html.twig');
+        $this->template = $this->twig->load('test.template.twig');*/
+
     }
 }
