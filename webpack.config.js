@@ -17,5 +17,6 @@ module.exports = {
         // the filename template for entry chunks
         libraryTarget: 'var',
         library: 'ui'
-    }
+    },
+    watch : true
 };

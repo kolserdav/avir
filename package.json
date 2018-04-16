@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/kolserdav/avir#readme",
   "dependencies": {
-    "ajaxsim": "0.0.2",
+    "ajaxsim": "^1.0.0",
+    "dist-cookie": "0.0.3",
     "node-sass": "^4.8.3",
-    "russian_timer": "git+https://github.com/kolserdav/timer.git"
+    "pseudo-name": "0.0.4"
   },
   "devDependencies": {
     "@webpack-contrib/schema-utils": "^1.0.0-beta.0",

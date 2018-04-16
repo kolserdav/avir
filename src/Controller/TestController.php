@@ -9,8 +9,8 @@
 namespace Avir\Controller;
 
 use Avir\Model\ModelOne;
-use Avir\Templater\Render;
-use Avir\Templater\Config;
+use Avir\Templater\Module\Render;
+use Avir\Templater\Module\Config;
 
 
 class TestController extends Controller
@@ -18,10 +18,30 @@ class TestController extends Controller
     public $params;
     public function test()
     {
-        var_dump($this->params);
-        //$model = new ModelOne();
-        //echo $this->template->render(array('title' => $this, 'title2' => 1));
-        return true;
+        $c = new Config();
+        $c->setConfig([
+            'cache' => 'var/cache',
+            'userCache' => 'public/cache',
+            'cookieName' => 'tew'
+        ]);
+        $r = new Render('resources/template', 'test.template.twig');
+        $sss = "<hr>ffffff<hr>";
+        $man = 'http://'.$_SERVER['SERVER_NAME']."/.manifest.appcache";
+        $r->render(
+            [
+                'manifest'=>$man,
+                'test1' => 'aaa',
+                'test2' => 'bbb',
+                'test3' => 'ccc',
+                'for_array' => [1,2,3,$sss],
+                'for_array2' => ['f','E'],
+                'for_array3' => ['a','f','s']
+            ],[
+            'manif' => 'app/manifest.twig',
+            'field1' => 'ind.twig',
+            'field2' => 'app/ind1.twig',
+            'title' => 'title.twig'
+        ]);
     }
     public function tests()
     {
@@ -60,8 +80,8 @@ class TestController extends Controller
         else {
             $c = new Config();
             $c->setConfig([
-                'cache' => false,
-                'userCache' => false
+                'cache' => 'var/cache',
+                'userCache' => 'public/cache'
             ]);
             $r = new Render('resources/template/', '/test.template.twig');
             $r->render(
@@ -74,7 +94,8 @@ class TestController extends Controller
     }
     public function aj()
     {
-        echo $_REQUEST['test'];
+        $cookie = json_decode($_REQUEST['cookie']);
+        var_dump($cookie->name->time.$cookie->name->nameCookie->clear);
 
         exit();
     }
