@@ -24,23 +24,15 @@ class TestController extends Controller
             'userCache' => 'public/cache',
             'cookieName' => 'tew'
         ]);
-        $r = new Render('resources/template', 'test.template.twig');
-        $sss = "<hr>ffffff<hr>";
-        $man = 'http://'.$_SERVER['SERVER_NAME']."/.manifest.appcache";
+        $r = new Render('resources/template', 'template.twig');
+        $server = $_SERVER['SERVER_NAME'];
+        $protocol = strtolower(preg_replace('%\/\d*\.\d*%','', $_SERVER['SERVER_PROTOCOL']));
         $r->render(
             [
-                'manifest'=>$man,
-                'test1' => 'aaa',
-                'test2' => 'bbb',
-                'test3' => 'ccc',
-                'for_array' => [1,2,3,$sss],
-                'for_array2' => ['f','E'],
-                'for_array3' => ['a','f','s']
+                'title' => 'Name page'
             ],[
-            'manif' => 'app/manifest.twig',
-            'field1' => 'ind.twig',
-            'field2' => 'app/ind1.twig',
-            'title' => 'title.twig'
+
+
         ]);
     }
     public function tests()

@@ -2,6 +2,21 @@ let ajaxS = require('ajaxsim');
 let names = require('pseudo-name');
 let cook = require('dist-cookie');
 
+/*setInterval(()=>{let i = (Math.random()*100).toFixed(0);
+    if (i > 50){
+        console.log(i);
+    }
+    else {
+        console.error('< 50');
+    }
+}, 1000);*/
+
+
+
+let re = window.applicationCache.status;
+//window.onload  =
+//console.log(Math.random()*100);
+
 function se(url = '', data = '', callback = '', method = 'POST'){
 
     function H() {}
