@@ -18,5 +18,6 @@ module.exports = {
         libraryTarget: 'var',
         library: 'ui'
     },
-    watch : true
+    watch : true,
+    performance: { hints: false }
 };

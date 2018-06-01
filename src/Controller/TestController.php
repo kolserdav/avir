@@ -11,6 +11,7 @@ namespace Avir\Controller;
 use Avir\Model\ModelOne;
 use Avir\Templater\Module\Render;
 use Avir\Templater\Module\Config;
+use Avir\Hash\Reader;
 
 
 class TestController extends Controller
@@ -20,8 +21,8 @@ class TestController extends Controller
     {
         $c = new Config();
         $c->setConfig([
-            'cache' => 'var/cache',
-            'userCache' => 'public/cache',
+            'cache' => false,
+            'userCache' => false,
             'cookieName' => 'tew'
         ]);
         $r = new Render('resources/template', 'template.twig');
@@ -37,12 +38,10 @@ class TestController extends Controller
     }
     public function tests()
     {
-
-
         $c = new Config();
         $c->setConfig([
-            'cache' => 'var/cache',
-            'userCache' => 'public/cache'
+            'cache' => false,
+            'userCache' => false
         ]);
         $r = new Render('resources/template', '/test.template.twig');
         $r->render(
@@ -63,6 +62,11 @@ class TestController extends Controller
             'array1' => ['s','s','f'],
             ));*/
         return 'tests';
+    }
+    public function route()
+    {
+        $s = new Reader();
+        $s->getRoutes();
     }
     public function ajax()
     {

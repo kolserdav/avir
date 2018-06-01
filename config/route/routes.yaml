@@ -10,6 +10,12 @@
 tests :
       path: /tests/
       controller: TestController::tests
+      hash: #Require field and name
+              route1 : file::module1 #Custom fields with special format
+              route2 : file::module2
+routejs :
+      path: /routejs-data
+      controller: TestController::route
 test :
       path : /test/{id}
       controller : TestController::test

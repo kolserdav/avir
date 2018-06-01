@@ -13,11 +13,14 @@ let cook = require('dist-cookie');
 
 
 
-let re = window.applicationCache.status;
+//let re = window.applicationCache.status;
 //window.onload  =
 //console.log(Math.random()*100);
 
-function se(url = '', data = '', callback = '', method = 'POST'){
+let route = require('route-fhash');
+route('resources/assets/js/route');
+
+/*function se(url = '', data = '', callback = '', method = 'POST'){
 
     function H() {}
     let h = new H();
@@ -33,6 +36,6 @@ function se(url = '', data = '', callback = '', method = 'POST'){
 }
 
 
-window.se = se;
+window.se = se;*/
 
 

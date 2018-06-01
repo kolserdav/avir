@@ -7,7 +7,7 @@ $t1 = microtime();
 $router = new Route();
 $router->route();
 $t2 = microtime();
-echo $t2 - $t1;
+//echo $t2 - $t1;
 
 
 
