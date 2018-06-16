@@ -76,8 +76,8 @@ class TestController extends Controller
         else {
             $c = new Config();
             $c->setConfig([
-                'cache' => 'var/cache',
-                'userCache' => 'public/cache'
+                'cache' => false,
+                'userCache' => false
             ]);
             $r = new Render('resources/template/', '/test.template.twig');
             $r->render(

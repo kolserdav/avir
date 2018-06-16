@@ -18,7 +18,7 @@ let cook = require('dist-cookie');
 //console.log(Math.random()*100);
 
 let route = require('route-fhash');
-route('resources/assets/js/route');
+route((c)=>{alert('before'); c();}, ()=>{alert('after')});
 
 /*function se(url = '', data = '', callback = '', method = 'POST'){
 

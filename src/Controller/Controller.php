@@ -15,20 +15,6 @@ use Twig_TemplateWrapper;
 
 class Controller
 {
-    /**
-     * @var Twig_Loader_Filesystem
-     */
-
-    protected $loader;
-    /**
-     * @var Twig_Environment
-     */
-    protected $twig;
-
-    /**
-     * @var Twig_TemplateWrapper
-     */
-    protected $template;
 
     /**
      * @var integer
@@ -37,12 +23,7 @@ class Controller
 
     public function __construct()
     {
-        /*$this->loader = new Twig_Loader_Filesystem(__DIR__.'/../../resources/template/');
-        $this->twig = new Twig_Environment($this->loader, array(
-            'cache' => '../var/cache',
-            'debug' => true
-        ));
-        $this->template = $this->twig->load('test.template.twig');*/
+
 
     }
 }

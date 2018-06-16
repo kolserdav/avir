@@ -25,11 +25,11 @@
     "dist-cookie": "0.0.3",
     "node-sass": "^4.9.0",
     "pseudo-name": "0.0.4",
-    "route-fhash": "0.0.4"
+    "route-fhash": "0.0.5"
   },
   "devDependencies": {
     "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
     "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.4"
+    "webpack-cli": "^2.1.5"
   }
 }
